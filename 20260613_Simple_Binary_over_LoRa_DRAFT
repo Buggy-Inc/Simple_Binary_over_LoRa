@@ -179,7 +179,7 @@ best-effort e non costituisce garanzia.
 -----------------------------------------------------------------------------
 4.1 Limiti per Layer
 -----------------------------------------------------------------------------
-SBoLoRa su LoRa RAW distingue due livelli di limite:
+SBoRa su LoRa RAW distingue due livelli di limite:
 LIVELLO 1 - LoRa PHY raw (SX126x / SX127x):
   - FIFO payload massimo: 255 byte per tutti gli SF
   - Limite indipendente da SF, BW, CR
