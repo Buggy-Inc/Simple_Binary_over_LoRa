@@ -154,12 +154,15 @@ versioni future: NON e' presente in v0.1.
 |     |              | tentativo best-effort (NON garantito) di MSG_EVENT   |
 |     |              | NetworkLost (ID 641) al ripristino del canale.       |
 *---------------------------------------------------------------------------*
+
 QoS 2 e' riservato ad alta priorita' (allarmi critici, comandi attuativi).
 Non usare per telemetria periodica.
+
 DIFFERENZA QoS 1 / QoS 2: la distinzione e' INTERAMENTE comportamentale e
 lato MITTENTE. Sul filo i due livelli sono indistinguibili (stesso Control
 byte, stesso FLAG_ACK_REQUIRED, stessa risposta MSG_ACK). Il ricevitore
 tratta QoS 1 e QoS 2 in modo identico.
+
 BIT QoS NELL'HEADER: NON si introduce un bit QoS nel wire-format in v0.1,
 pur essendo disponibili 2 bit Flags riservati (0x40, 0x80). Motivazione
 tecnica: l'unico consumatore possibile di una "criticita' dichiarata"
@@ -170,6 +173,7 @@ fronte del consumo di un bit scarso. Il bit 0x40 resta RISERVATO: una
 versione futura potra' definirlo come FLAG_PRIORITY senza breaking change
 (17.3), qualora emerga una semantica ricevente utile (es. coda di
 ritrasmissione differenziata in reti schedulate).
+
 NOTA: NetworkLost in QoS 2 e' una notifica LOCALE. Se il canale e' perso,
 l'evento on-air potrebbe non essere recapitabile: la sua trasmissione e'
 best-effort e non costituisce garanzia.
