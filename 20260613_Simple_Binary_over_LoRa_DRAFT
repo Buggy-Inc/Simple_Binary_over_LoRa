@@ -14,12 +14,12 @@ CHANGELOG
 | 0.1     | 2026-06-13 | Bozza iniziale.                                    |
 |---------|------------|----------------------------------------------------|
 *---------------------------------------------------------------------------*
-|  NOTA SCOPE: questa versione definisce SBoLoRa SOLO sul trasporto LoRa RAW  |
+|  NOTA SCOPE: questa versione definisce SBoLoRa SOLO sul trasporto LoRa RAW|
 |  point-to-point / star (SX126x / SX127x), senza stack mesh o LoRaWAN.     |
 |  Estensioni di trasporto (mesh, LoRaWAN) sono fuori scope per v0.1 e      |
 |  citate solo come possibili evoluzioni future (sezione 15.4).             |
 |                                                                           |
-|  NOTA COMPATIBILITA': SBoLoRa v0.1 e' in stato "Draft" e mai deployato in   |
+|  NOTA COMPATIBILITA': SBoLoRa v0.1 e' in stato "Draft" e mai deployato in |
 |  produzione. I breaking changes sono giustificati dalla necessita' di     |
 |  correggere e migliorare la specifica prima di qualsiasi implementazione. |
 |  Non esistono nodi in campo con cui rompere l'interoperabilita'.          |
@@ -54,7 +54,7 @@ al preset MeshCore "EU/UK Narrow" per facilitare un futuro transito mesh
 *---------------------------------------------------------------------------*
 | Termine       | Definizione                                               |
 |---------------|-----------------------------------------------------------|
-| Nodo          | Dispositivo che partecipa alla rete SBoLoRa                 |
+| Nodo          | Dispositivo che partecipa alla rete SBoLoRa               |
 | Sensore       | Nodo che raccoglie e trasmette dati verso il gateway      |
 | Gateway       | Nodo che riceve pacchetti e li inoltra al backend         |
 | Relay         | Nodo che riceve e ritrasmette per estendere la copertura  |
@@ -85,6 +85,7 @@ al preset MeshCore "EU/UK Narrow" per facilitare un futuro transito mesh
 3. PRINCIPI DI PROGETTAZIONE
 =============================================================================
 Il protocollo si basa su cinque principi fondamentali:
+
   P1. Backward e Forward Compatibility:
       nuovi nodi non rompono i vecchi; vecchi nodi convivono con nuovi
       campi tramite skip deterministico dei TLV sconosciuti, ENTRO
